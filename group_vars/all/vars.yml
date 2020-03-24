@@ -1,0 +1,7 @@
+---
+network: "10.206.210.160/27"
+gateway: "10.206.210.161"
+table1name: "t1"
+table2name: "t2"
+defaultdevice: "ens5"
+vipdevice: "eth0"
