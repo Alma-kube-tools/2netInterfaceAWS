@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - debug: var=group_vars_variable
+    - debug: var=net
+    - debug: var=gateway
+    - debug: var=table1name
+    - debug: var=defaultdevice
+    - debug: var=vipdevice

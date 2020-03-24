@@ -1,0 +1,9 @@
+group_vars_variable: true
+net: 10.206.210.160/27
+gateway: 10.206.210.161
+table1name: t1
+table2name: t2
+defaultdevice: ens5
+vipdevice: eth0
+vipip: 10.206.210.170
+defaultnetmask: 255.255.255.224
