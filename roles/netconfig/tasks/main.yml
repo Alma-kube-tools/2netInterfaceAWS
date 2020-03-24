@@ -22,7 +22,7 @@
 
 - name: Create rule file for vip interface
   become: true
-  template: src=rulevipdev.j2 dest=/etc/sysconfig/network-scripts/rule-eth0
+  template: src=rulevipdev.j2 dest=/etc/sysconfig/network-scripts/rule-{{vipdevice}}
     owner=root group=root mode=0644
   register: copy_rule_vip
 
