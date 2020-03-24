@@ -5,21 +5,25 @@
 
 
 - name: Create route file for vip interface
+  become: true
   template: src=routevip.j2 dest=/etc/sysconfig/network-scripts/route-{{ vipdevice }}
     owner=root group=root mode=0644
   register: copy_vip_route
 
 - name: Create rule file for default interface
+  become: true
   template: src=ruledefault.j2 dest=/etc/sysconfig/network-scripts/rule-{{ defaultdevice }}
     owner=root group=root mode=0644
   register: copy_rule_default
 
 - name: Create rule file for vip interface
+  become: true
   template: src=rulevipdev.j2 dest=/etc/sysconfig/network-scripts/rule-{{ vipdevice }}
     owner=root group=root mode=0644
   register: copy_rule_vip
 
 - name: Create vip interface config file
+  become: true
   template: src=ifcfg-eth.j2 dest=/etc/sysconfig/network-scripts/ifcfg-{{ vipdevice }}
     owner=root group=root mode=0644
   register: create_config_file_eth  

@@ -1,4 +1,5 @@
 ---
-- hosts: 2netnode
+- hosts: netnode
+  remote_user: centos
   roles:
-    - {role: 2netconfig}
+    - {role: netconfig}
