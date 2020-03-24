@@ -33,11 +33,18 @@
   register: create_config_file_eth  
 
 - name: Insert 100 t1 entry in /etc/iproute2/rt_tables
+  become: true
   lineinfile:
     path: /etc/iproute2/rt_tables
     line: '100 t1'
 
 - name: Insert 101 t2 entry in /etc/iproute2/rt_tables
+  become: true
   lineinfile:
     path: /etc/iproute2/rt_tables
     line: '101 t2'
+
+- name: Copy sysctl parameter
+  become: true
+  template: src=98-2netaws.conf.j2 dest=/etc/sysctl.d/98-2netaws.conf
+    owner=root group=root mode=0644
