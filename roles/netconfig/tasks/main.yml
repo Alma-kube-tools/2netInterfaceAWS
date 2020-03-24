@@ -1,5 +1,6 @@
 ---
 - name: Create route file for default interface
+  become: true
   template: 
     src=routedefault.j2
     dest=/etc/sysconfig/network-scripts/route-{{defaultdevice}} 
