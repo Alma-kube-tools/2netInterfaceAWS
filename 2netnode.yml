@@ -1,0 +1,4 @@
+---
+- hosts: 2netnode
+  roles:
+    - {role: 2netconfig}
