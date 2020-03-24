@@ -30,3 +30,13 @@
   template: src=ifcfg-eth.j2 dest=/etc/sysconfig/network-scripts/ifcfg-{{ vipdevice }}
     owner=root group=root mode=0644
   register: create_config_file_eth  
+
+- name: Insert 100 t1 entry in /etc/iproute2/rt_tables
+  lineinfile:
+    path: /etc/iproute2/rt_tables
+    line: '100 t1'
+
+- name: Insert 101 t2 entry in /etc/iproute2/rt_tables
+  lineinfile:
+    path: /etc/iproute2/rt_tables
+    line: '101 t2'
