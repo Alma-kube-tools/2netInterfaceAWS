@@ -1,0 +1,10 @@
+- name: Copy route file for default interface
+  template: src=routedefault.j2 dest=/etc/sysconfig/network-scripts/route-{{defaultdevice}} 
+    owner=root group=root mode=0644
+  register: copy_default_route
+
+
+- name: Copy route file for vip interface
+  template: src=routevip.j2 dest=/etc/sysconfig/network-scripts/route-{{vipdevice}}
+    owner=root group=root mode=0644
+  register: copy_vip_route
