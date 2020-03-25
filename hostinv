@@ -1,6 +1,6 @@
 [netnode]
 
-ip-10-206-210-169.eu-west-1.compute.internal
-ip-10-206-210-174.eu-west-1.compute.internal
-ip-10-206-210-175.eu-west-1.compute.internal
+hostname1
+hostname2
+hostname-n
 
