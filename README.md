@@ -24,6 +24,8 @@ vipdevice: eth0
 vipip: xxx.xxx.xxx.xxx
 defaultnetmask: 255.255.255.0
 ```
+Playbook launche command
+ansible-playbook 2netnode.yml -i ./hostinv  --private-key=/path/to/your/private/key 
 
 Example:
 Postgres cluster with virtual ip for pgpool 
