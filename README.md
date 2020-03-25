@@ -12,6 +12,7 @@ Net is the network in CIDR format
 Gateway is default gateway for the network
 table1name is the routing table name for the 1 network interface of ec2 instance 
 table2name is the routing table name for VIP interface
+defaultdevice is the first network interface that will be created on first deploy
 vipdevice is the name for the vip interface that you attach and detach at runtime
 vipip is the ip for the interface that you use for vip
 defaultnetmask is the netmask of the network is useful for build the config file 
