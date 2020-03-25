@@ -7,6 +7,7 @@ This playbook config 2 or more ec2 instance on AWS for manage netowrk traffic wi
 Before you can use this playbook config the group_vars all with this mandatory variable:
 
 This an example you must change and with your value for vipip you can find the ip of the interface that you have defined on aws console under interfaces and you want to use for VIP.
+```
 Net is the network in CIDR format 
 Gateway is default gateway for the network
 table1name is the routing table name for the 1 network interface of ec2 instance 
@@ -14,6 +15,7 @@ table2name is the routing table name for VIP interface
 vipdevice is the name for the vip interface that you attach and detach at runtime
 vipip is the ip for the interface that you use for vip
 defaultnetmask is the netmask of the network is useful for build the config file 
+```
 ```yaml
 net: xxx.xxx.xxx.xxx/24
 gateway: gateway_ip
