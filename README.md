@@ -38,6 +38,7 @@ You can define a vip network interface that isn't attached to any ec2 instance, 
 ###### Note: to do this you must install aws cli on the ec2 that can belong at cluster pgpool, and create 2 script one for escalation up and one for de-escalation
 
 Here an example for escalation script and de-escalation
+
 Escalation up 
 ```bash
 #!/bin/bash
