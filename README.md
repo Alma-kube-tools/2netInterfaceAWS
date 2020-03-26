@@ -59,9 +59,9 @@ echo "Attach VIP Interface"
 /usr/local/bin/aws ec2 attach-network-interface --instance-id $INSTANCEID --network-interface-id eni-11111111111111111 --device-index 1
 
 
-echo "Wait 3 second before Config the interface"
+echo "Wait 5 second before Config the interface"
 ###This is useful to wait kernel 
-sleep 3
+sleep 5
 /sbin/ifup eth0
 ```
 De escalation
